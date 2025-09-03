@@ -13,25 +13,25 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/filmes")
-public class FilmeController {
+@RequestMapping("/genero")
+public class GeneroController {
 
-    private List<Filme> lista = new ArrayList<>();
+    private List<Genero> lista = new ArrayList<>();
 
     private long contador = 1;
 
     @PostMapping
-    public Filme incluir(Filme filme){
-        filme.setId(contador);
+    public Genero incluir(Genero genero){
+        genero.setId(contador);
         ++contador;
-        lista.add(filme);
-        return filme;
+        lista.add(genero);
+        return genero;
 
     }
 
     @GetMapping
-    public List<Filme> listar(){
-        return lista;
+    public List<Genero> listar(){
+        return genero;
     }
 
 }
